@@ -24,7 +24,9 @@ numCombo=0
 layout1=[[sg.Text("How many iterations of the combination: ")],
         [sg.Text("Enter: "), sg.InputText()],
         [sg.OK(), sg.Cancel()]]
-layout2=[[sg.Text("1) Write (What to type on the screen)\n2) Key (What to press)")],
+layout2=[[sg.Text("Welcome! Enter an event for the combination and click 'done' to enter the next event. Click 'cancel' to execute your combination.")],
+        [sg.Text("Options: ")],
+        [sg.Text("1) Write (What to type on the screen)\n2) Key (What to press)\nPopular:\nenter\ntab\nbackspace")],
         [sg.Text("Option"), sg.InputText(do_not_clear=False)],
         [sg.Text("Value: "), sg.InputText(do_not_clear=False)],
         [sg.Text("Amount: "), sg.InputText(do_not_clear=False)],
