@@ -1,1 +1,1 @@
-"# AutoTyper" 
+AutoTyper
