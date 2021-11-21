@@ -1,3 +1,12 @@
+"""
+This project was created to complete long, repetitive typing tasks. You are prompted to enter a series of combinations which will be repeated.
+The series of either messages or keyboard presses will activate for a given amount of times. As you sit back and relax, the program will do the work for you.
+
+Using:
+- Pyautogui: typing and keyboard presses
+- PySimpleGUI: User interface
+"""
+
 import pyautogui, time
 import PySimpleGUI as sg
 
