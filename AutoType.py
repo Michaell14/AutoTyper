@@ -18,6 +18,9 @@ action=[]
 values=[]
 numCombo=0
 
+#GUI Layouts;
+#layout1 -> number of iterations
+#layout2 -> series of combinations
 layout1=[[sg.Text("How many iterations of the combination: ")],
         [sg.Text("Enter: "), sg.InputText()],
         [sg.OK(), sg.Cancel()]]
@@ -27,12 +30,14 @@ layout2=[[sg.Text("1) Write (What to type on the screen)\n2) Key (What to press)
         [sg.Text("Amount: "), sg.InputText(do_not_clear=False)],
         [sg.OK(), sg.Cancel()]]
 
+#getting number of iterations
 window=sg.Window("Spammer.py", layout1)
 
 event, vals=window.read()
 numCombo = int(vals[0])
 window.close()
 
+#getting each combination event
 window=sg.Window("Spammer.py", layout2)
 while True:
     event, vals=window.read()
@@ -42,12 +47,10 @@ while True:
     values.append([vals[1], int(vals[2])])
 
 window.close()
-print(action)
-print(values)
 
 print("STARTING...")
 
-
+#Running through one iteration of the keyboard combination
 def main():
     for i in range(len(values)):
         val=values[i][0]
@@ -59,10 +62,12 @@ def main():
                 pyautogui.press(val)
                 time.sleep(.5)
 
+#Giving client time to navigate to monitor
 for i in range(5, 0, -1):
     print(i)
     time.sleep(1)
 
+#Executes the combination numCombo amount of times
 for i in range(numCombo):
     main()
     time.sleep(1)
